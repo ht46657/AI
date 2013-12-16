@@ -9,9 +9,13 @@ public class Mastermind {
 	//String command = "timeout 1000 ./" + args[0];
 
 	try {
-	
+		
+		//Process c2 = Runtime.getRuntime().exec("set path = C:\\Program Files\\Jav\\a\\jdk1.7.0_45\\bin");
 		Process c = Runtime.getRuntime().exec("javac Mastermind471.java");
 	    Process child = Runtime.getRuntime().exec("java Mastermind471");
+	    
+	    System.out.println("started");
+	    
 	    PrintWriter childOutput = new PrintWriter(child.getOutputStream());
 	    Scanner childInput = new Scanner(child.getInputStream());
 	    
@@ -20,6 +24,7 @@ public class Mastermind {
 	    while(! listEquals(guess, toGuess)) {
 
 		String[] stringGuess = childInput.nextLine().split(" ");
+	    childOutput.println(stringGuess);
 	    
 		for(int i = 0; i < stringGuess.length; i++) {
 		    guess[i] = Integer.parseInt(stringGuess[i]);
