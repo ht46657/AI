@@ -4,6 +4,10 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Random;
 
+//Written By:
+//Zachary Hisley
+//Justin Whiteside
+
 
 public class TempTFS {
 	
