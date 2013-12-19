@@ -17,7 +17,7 @@ public class Runner
 			
 			try
 			{
-				int i = Integer.parseInt(s.next());
+				int i = Integer.parseInt(s.nextLine());
 				
 				if(i == 1)
 				{
